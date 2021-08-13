@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(
+    to right top,
+    hsl(200, 100%, 50%),
+    hsl(175, 100%, 50%)
+  );
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.clock {
+  background: linear-gradient(
+    to right top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.7)
+  );
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px black solid;
+}
+.number {
+  --rotate: 0deg;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+  text-align: center;
+  font-size: 2rem;
+  transform: rotate(var(--rotate));
+}
+.number1 {
+  --rotate: 30deg;
+  transform: rotate(var(--rotate));
+}
+.number2 {
+  --rotate: 60deg;
+  transform: rotate(var(--rotate));
+}
+.number3 {
+  --rotate: 90deg;
+  transform: rotate(var(--rotate));
+}
+.number4 {
+  --rotate: 120deg;
+  transform: rotate(var(--rotate));
+}
+.number5 {
+  --rotate: 150deg;
+  transform: rotate(var(--rotate));
+}
+.number6 {
+  --rotate: 180deg;
+  transform: rotate(var(--rotate));
+}
+.number7 {
+  --rotate: 210deg;
+  transform: rotate(var(--rotate));
+}
+.number8 {
+  --rotate: 240deg;
+  transform: rotate(var(--rotate));
+}
+.number9 {
+  --rotate: 270deg;
+  transform: rotate(var(--rotate));
+}
+.number10 {
+  --rotate: 300deg;
+  transform: rotate(var(--rotate));
+}
+.number11 {
+  --rotate: 330deg;
+  transform: rotate(var(--rotate));
+}
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 10px;
+  height: 50%;
+  background: black;
+  transform-origin: bottom;
+  border: 1px white solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 3;
+  transform: translateX(-50%) rotate(0);
+}
+.hand-second {
+  width: 5px;
+  background: red;
+  height: 45%;
+}
+.hand-minute {
+  width: 7px;
+  height: 40%;
+}
+.hand-hour {
+  width: 10px;
+  height: 35%;
+}
+.clock::after {
+  position: absolute;
+  background: black;
+  width: 20px;
+  height: 20px;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 5;
+}
