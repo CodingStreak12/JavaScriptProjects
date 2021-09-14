@@ -92,13 +92,18 @@ main {
 .message {
   height: 2rem;
   margin-bottom: 5rem;
+  position: relative;
+  top: 50px;
   font-size: 1.5rem;
 }
 .label-score {
   margin-bottom: 2rem;
   font-size: 1.2rem;
+  position: relative;
+  top: 30px;
 }
 .label-highscore {
   font-size: 1.2rem;
+  position: relative;
+  top: 40px;
 }
-
