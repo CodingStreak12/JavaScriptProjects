@@ -21,7 +21,7 @@ again.addEventListener("click", () => {
 });
 
 function correctAnser() {
-  document.querySelector("body").style.backgroundColor = "Green";
+  document.querySelector("body").style.backgroundColor = "#60b347";
   message.textContent = "🎉 Congratulations You Won";
   number.textContent = ULTIMATE_NUMBER;
   if (scoreValue > highScoreValue) {
@@ -38,7 +38,7 @@ check.addEventListener("click", () => {
   if (Number.parseInt(guess.value) === ULTIMATE_NUMBER) {
     correctAnser();
     return;
-  } else {
+  } else if (scoreValue > 1) {
     if (Number.parseInt(guess.value) > ULTIMATE_NUMBER) {
       message.textContent = "Guess Lower";
       wrongAnswer();
@@ -46,5 +46,9 @@ check.addEventListener("click", () => {
       message.textContent = "Guess Higher";
       wrongAnswer();
     }
+  } else {
+    message.textContent = "You Lost";
+    score.textContent = "0";
+    return;
   }
 });
